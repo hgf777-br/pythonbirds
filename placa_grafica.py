@@ -7,7 +7,7 @@ from templates import FIM
 
 try:
     import msvcrt
-except:
+except ValueError:
     pass
 import select
 
@@ -63,7 +63,7 @@ def _jogar(delta_t, fase, passo, tempo, msg):
                     angulo = float(input('Digite o Ângulo de Lançamento: '))
                     fase.lancar(angulo, tempo)
                     break
-                except:
+                except ValueError:
                     print('Erro: valor tem que ser númerico!')
     return tempo
 
