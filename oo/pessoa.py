@@ -1,4 +1,8 @@
 class Pessoa:
+    def __init__(self, nome:str=None, idade:int=0) -> None:
+        self.nome = nome
+        self.idade = idade
+    
     def cumprimentar(self):
         return f"Ola {id(self)}"
         
