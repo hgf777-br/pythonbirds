@@ -28,11 +28,11 @@ VOCE_GANHOU = PhotoImage(file=path.join(IMAGES_PATH, "python-birds-voce-ganhou-p
 VOCE_PERDEU = PhotoImage(file=path.join(IMAGES_PATH, "python-birds-voce-perdeu-popup.gif"))
 
 CARACTER_PARA__IMG_DCT = {'V': PASSARO_VERMELHO,
-                          'A': PASSARO_AMARELHO,
-                          '@': PORCO,
-                          'O': OBSTACULO,
-                          '+': PORCO_MORTO,
-                          ' ': TRANSPARENTE}
+                        'A': PASSARO_AMARELHO,
+                        '@': PORCO,
+                        'O': OBSTACULO,
+                        '+': PORCO_MORTO,
+                        ' ': TRANSPARENTE}
 
 
 def plotar(camada_de_atores, ponto):

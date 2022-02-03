@@ -57,11 +57,11 @@ class Ator():
 
 
 class Obstaculo(Ator):
-    pass
+    _caracter_ativo = 'O'
 
 
 class Porco(Ator):
-    pass
+    _caracter_ativo = '@'
 
 
 class DuploLancamentoExcecao(Exception):
@@ -89,7 +89,7 @@ class Passaro(Ator):
 
     def foi_lancado(self):
         """
-        Método que retorna verdaeira se o pássaro já foi lançado e falso caso contrário
+        Método que retorna verdeira se o pássaro já foi lançado e falso caso contrário
 
         :return: booleano
         """
@@ -105,7 +105,7 @@ class Passaro(Ator):
 
     def calcular_posicao(self, tempo):
         """
-        Método que cálcula a posição do passaro de acordo com o tempo.
+        Método que calcula a posição do passaro de acordo com o tempo.
 
         Antes do lançamento o pássaro deve retornar o valor de sua posição inicial
 
@@ -133,8 +133,8 @@ class Passaro(Ator):
 
 
 class PassaroAmarelo(Passaro):
-    pass
+    _caracter_ativo = 'A'
 
 
 class PassaroVermelho(Passaro):
-    pass
+    _caracter_ativo = 'V'

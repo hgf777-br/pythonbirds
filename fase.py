@@ -73,8 +73,12 @@ class Fase():
 
         :return:
         """
-        return EM_ANDAMENTO
-
+        if self._possui_porco_ativo() and self._possui_passaro_ativo():
+            return EM_ANDAMENTO
+        elif self._possui_porco_ativo():
+            return DERROTA
+        else:
+            return VITORIA
     def lancar(self, angulo, tempo):
         """
         Método que executa lógica de lançamento.
@@ -104,4 +108,16 @@ class Fase():
 
     def _transformar_em_ponto(self, ator):
         return Ponto(ator.x, ator.y, ator.caracter())
+    
+    def _possui_porco_ativo(self):
+        for porco in self._porcos:
+            if porco.status == ATIVO:
+                return True
+        return False
+    
+    def _possui_passaro_ativo(self):
+        for passaro in self._passaros:
+            if passaro.status == ATIVO:
+                return True
+        return False
 
