@@ -169,7 +169,7 @@ class PorcoTestes(TestCase):
 class PassaroBaseTests(TestCase):
     """
     Classe base para teste de passaros.
-    Essa classe não contèm nenhum teste, serve apenas para encapsular a lógica de asserção de posição de passaros
+    Essa classe não contém nenhum teste, serve apenas para encapsular a lógica de asserção de posição de passaros
     vermelhos e também dos amarelos.
 
     """
@@ -215,7 +215,7 @@ class PassaroVermelhoTests(PassaroBaseTests):
         """
         passaro_vermelho = PassaroVermelho(1, 1)
         self.assertFalse(passaro_vermelho.foi_lancado(),
-                         'Se o método lançar ainda não foi executado, deve retornar falso')
+                        'Se o método lançar ainda não foi executado, deve retornar falso')
         passaro_vermelho.lancar(0, 0)
         self.assertTrue(passaro_vermelho.foi_lancado(),
                         'Se o método lançar foi executado, deve retornar verdadeiro')
